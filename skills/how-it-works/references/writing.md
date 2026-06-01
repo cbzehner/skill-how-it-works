@@ -1,4 +1,4 @@
-# Writing — Lynch principles + de-slopify
+# Writing — Lynch principles + humanize
 
 Read this before writing any prose for the page. The pass produces the difference between "AI writeup" and "engineer's writeup". HN and Lobsters readers downvote on tone alone.
 
@@ -80,9 +80,9 @@ A paragraph that survives on its own without two of its sentences should ship wi
 
 Every claim has one correct interpretation. If a sentence can be read two ways, the reader who picks the wrong one bounces.
 
-## De-slopify checklist
+## Humanize checklist
 
-Adapted from `de-slopify` skill. Apply line by line, not via regex. A word that's fine once is a tell when used three times.
+Adapted from the `humanize` skill. Apply line by line, not via regex. A word that's fine once is a tell when used three times.
 
 ### Kill on sight (overrepresented in LLM text)
 
@@ -128,7 +128,7 @@ Adapted from `de-slopify` skill. Apply line by line, not via regex. A word that'
 ### Structural patterns to break
 
 - **"Not just X, it's Y"** — most overused LLM rhetorical pattern. Rewrite as a direct statement.
-- **Em-dash overload** — one or two per page is fine; five per paragraph is a tell. Vary the fix: comma, semicolon, period, parenthetical, restructure.
+- **Em-dash overload** — one or two per page is fine; five per paragraph is a tell. Vary the fix: comma, period, parenthetical, restructure.
 - **Transition word chains** — "However… Furthermore… Additionally… Moreover…" at paragraph openings. Start paragraphs with subjects instead.
 - **List symmetry addiction** — exactly 3 or 5 items, all same grammatical structure. Real lists are uneven.
 - **Restating the heading in the next sentence** — readers just read the heading. Don't repeat.
@@ -136,7 +136,7 @@ Adapted from `de-slopify` skill. Apply line by line, not via regex. A word that'
 
 ### Punctuation tells
 
-- **Semicolon avoidance.** LLMs underuse semicolons. Add a few where they connect related independent clauses.
+- **Semicolon overuse.** Treat semicolons as suspicious in ordinary technical and product prose. Use a period or conjunction unless the register really wants one.
 - **Colon overuse in headings.** "Topic: The Subtitle Pattern" repeated four times in a row. Vary heading styles.
 
 ## The pass itself

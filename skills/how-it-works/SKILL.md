@@ -1,6 +1,6 @@
 ---
 name: how-it-works
-description: Build a polished, on-site /how-it-works page that explains a codebase's micro-systems in the site's own visual style. Use when the user wants an architecture explainer, a HN-shareable writeup, a build-journal page, or to "explain how X works" as a standalone artifact. Produces prose with real code excerpts (pinned to a SHA), hand-authored SVG diagrams in the site's palette, a sticky TOC, and de-slopified writing. Falls back to a single self-contained HTML file when no static site is detected.
+description: Build a polished, on-site /how-it-works page that explains a codebase's micro-systems in the site's own visual style. Use when the user wants an architecture explainer, a HN-shareable writeup, a build-journal page, or to "explain how X works" as a standalone artifact. Produces prose with real code excerpts (pinned to a SHA), hand-authored SVG diagrams in the site's palette, a sticky TOC, and humanized writing. Falls back to a single self-contained HTML file when no static site is detected.
 license: MIT
 effort: high
 allowed-tools: Read Write Edit Bash Glob Grep WebFetch WebSearch Skill Agent
@@ -109,9 +109,9 @@ Read `references/diagrams.md` before drawing anything. Critical points:
 
 **Exit**: 5–7 SVG files render correctly in the browser, the file sizes are sensible (under ~3 KB each), and a screenshot of any one of them looks like the site.
 
-### Phase 6 — Write and de-slopify (~45 min)
+### Phase 6 — Write and humanize (~45 min)
 
-Write each section to the spec from Phase 2. Then apply the writing pass in `references/writing.md` — Michael Lynch's principles plus the de-slopify checklist. This is not optional. Default LLM prose has a flavor that erodes credibility on HN and Lobsters specifically; the de-slop pass is the difference between "AI writeup" and "engineer's writeup".
+Write each section to the spec from Phase 2. Then apply the writing pass in `references/writing.md` — Michael Lynch's principles plus the humanize checklist. This is not optional. Default LLM prose has a flavor that erodes credibility on HN and Lobsters specifically; the humanize pass is the difference between "AI writeup" and "engineer's writeup".
 
 The pass focuses on:
 
@@ -154,13 +154,13 @@ At completion, the following exist and pass:
 
 - **HTML minifier breaks inlined SVGs.** Lowercases `viewBox` to `viewbox`. Browser ignores the attribute, SVG renders at default 300×150. **Fix:** load SVGs via `<img src=...>` instead of inlining; or disable HTML minification for this page. See `references/diagrams.md`.
 - **Diagrams look generic.** Common when authored without reading the existing site CSS. Always read existing styles first; copy the visual signature.
-- **Prose reads as AI-generated.** Skipping Phase 6 produces a writeup that scans poorly on HN. Always run de-slopify + Lynch.
+- **Prose reads as AI-generated.** Skipping Phase 6 produces a writeup that scans poorly on HN. Always run humanize + Lynch.
 - **Section count creep.** 5–7 is the sweet spot. Past 8, readers stop. Past 9, the page is a different kind of artifact (a book chapter), and you should split.
 - **Pinned SHA gets stale.** When code excerpts diverge meaningfully from `main`, update the pin. Don't pretend the page is a living doc — it's not.
 
 ## References
 
-- [`references/writing.md`](references/writing.md) — Michael Lynch's principles, de-slopify checklist, before/after examples
+- [`references/writing.md`](references/writing.md) — Michael Lynch's principles, humanize checklist, before/after examples
 - [`references/diagrams.md`](references/diagrams.md) — SVG authoring guide, the minifier pitfall, palette extraction, accessibility
 - [`references/integration.md`](references/integration.md) — per-SSG notes (Zola, Hugo, Jekyll, Astro, Next.js, plain HTML, standalone)
 
