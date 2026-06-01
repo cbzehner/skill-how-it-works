@@ -1,18 +1,16 @@
 # How It Works
 
-Build a polished, on-site /how-it-works page that explains a codebase's micro-systems in the site's own visual style. Use when the user wants an architecture explainer, a HN-shareable writeup, a build-journal page, or to "explain how X works" as a standalone artifact. Produces prose with real code excerpts (pinned to a SHA), hand-authored SVG diagrams in the site's palette, a sticky TOC, and de-slopified writing. Falls back to a single self-contained HTML file when no static site is detected.
+Build an on-site `/how-it-works` page that explains a codebase through its real subsystems. The output is a polished technical explainer that matches the site instead of looking like generic Markdown.
 
-## Skill
+## Use It For
 
-This repository packages one portable agent skill:
-
-- `how-it-works` - Build a polished, on-site /how-it-works page that explains a codebase's micro-systems in the site's own visual style. Use when the user wants an architecture explainer, a HN-shareable writeup, a build-journal page, or to "explain how X works" as a standalone artifact. Produces prose with real code excerpts (pinned to a SHA), hand-authored SVG diagrams in the site's palette, a sticky TOC, and de-slopified writing. Falls back to a single self-contained HTML file when no static site is detected.
-
-The canonical skill body lives at `skills/how-it-works/SKILL.md`. Keep behavior changes there; keep this README focused on installation and packaging.
+- Writing an architecture explainer for a repo
+- Turning source code into a shareable build journal
+- Adding diagrams and code excerpts that are pinned to real files
 
 ## Install
 
-Clone the repository, then run the installer:
+Clone the repo and run the installer:
 
 ```bash
 git clone https://github.com/cbzehner/skill-how-it-works.git
@@ -22,38 +20,34 @@ cd skill-how-it-works
 
 Install targets:
 
-- `./install.sh claude` -> `~/.claude/skills/how-it-works`
-- `./install.sh codex` -> `~/.codex/skills/how-it-works`
-- `./install.sh agents` -> `~/.agents/skills/how-it-works` for generic agent harnesses such as Pi/Hermes-style setups
-- `./install.sh opencode` -> `~/.config/opencode/skills/how-it-works`
+- `./install.sh claude` installs to `~/.claude/skills/how-it-works`
+- `./install.sh codex` installs to `~/.codex/skills/how-it-works`
+- `./install.sh agents` installs to `~/.agents/skills/how-it-works`
+- `./install.sh opencode` installs to `~/.config/opencode/skills/how-it-works`
 - `./install.sh all --copy` copies files instead of symlinking
 
-Manual installation is just a symlink or copy from `skills/how-it-works` into your agent's skills directory.
+Manual install works too: symlink or copy `skills/how-it-works` into your agent's skills directory.
 
-## Compatibility
+## Agent Support
 
-This repo uses the common `skills/<name>/SKILL.md` layout so agents that understand file-based skills can load it directly. Host-specific metadata is included where useful:
+This repo uses the plain `skills/how-it-works/SKILL.md` layout. Claude Code and Codex also get small plugin manifests at `.claude-plugin/plugin.json` and `.codex-plugin/plugin.json`.
 
-- Claude Code: `.claude-plugin/plugin.json` and direct `~/.claude/skills` install
-- Codex CLI: `.codex-plugin/plugin.json` with `skills: "./skills/"` and direct `~/.codex/skills` install
-- Other agents: direct install to the agent's skills directory; unsupported frontmatter fields can be ignored
+Other agents can read the same `SKILL.md` file. If a host does not support a frontmatter field or tool name, ignore that field and follow the workflow text.
 
-Some skills mention optional host tools such as `Task`, `Agent`, `Skill`, MCP tools, or browser automation CLIs. On hosts that do not provide those tools, adapt to equivalent local capabilities and keep the same workflow intent.
-
-## Public Safety
-
-These repositories are public. Do not commit organization-specific instructions, private repository names, secrets, tokens, cookies, raw session logs, customer data, or machine-local paths. Use environment variables and generic paths in examples.
-
-## Repository Layout
+## Layout
 
 ```text
-.claude-plugin/plugin.json   # Claude plugin metadata
-.codex-plugin/plugin.json    # Codex plugin metadata
-install.sh                   # Symlink/copy installer for common agent skill dirs
+.claude-plugin/plugin.json
+.codex-plugin/plugin.json
+install.sh
 skills/how-it-works/SKILL.md
 README.md
 LICENSE
 ```
+
+## Public Notes
+
+These repos are public. Keep private repo names, secrets, customer data, raw logs, cookies, and absolute filesystem paths out of examples.
 
 ## License
 
