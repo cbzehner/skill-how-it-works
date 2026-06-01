@@ -1,0 +1,32 @@
+{
+  "name": "how-it-works",
+  "version": "1.0.0",
+  "description": "Build a polished, on-site /how-it-works page that explains a codebase's micro-systems in the site's own visual style. Use when the user wants an architecture explainer, a HN-shareable writeup, a build-journal page, or to \"explain how X works\" as a standalone artifact. Produces prose with real code excerpts (pinned to a SHA), hand-authored SVG diagrams in the site's palette, a sticky TOC, and de-slopified writing. Falls back to a single self-contained HTML file when no static site is detected.",
+  "author": {
+    "name": "cbzehner",
+    "url": "https://github.com/cbzehner"
+  },
+  "homepage": "https://github.com/cbzehner/skill-how-it-works",
+  "repository": "https://github.com/cbzehner/skill-how-it-works",
+  "license": "MIT",
+  "keywords": [
+    "how-it-works",
+    "how",
+    "it",
+    "works",
+    "agent-skill"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "How It Works",
+    "shortDescription": "Build a polished, on-site /how-it-works page that explains a codebase's micro-systems in the site's own visual style....",
+    "longDescription": "Build a polished, on-site /how-it-works page that explains a codebase's micro-systems in the site's own visual style. Use when the user wants an architecture explainer, a HN-shareable writeup, a build-journal page, or to \"explain how X works\" as a standalone artifact. Produces prose with real code excerpts (pinned to a SHA), hand-authored SVG diagrams in the site's palette, a sticky TOC, and de-slopified writing. Falls back to a single self-contained HTML file when no static site is detected.",
+    "developerName": "cbzehner",
+    "category": "Writing & Design",
+    "capabilities": [
+      "Writing",
+      "Design"
+    ],
+    "websiteURL": "https://github.com/cbzehner/skill-how-it-works"
+  }
+}

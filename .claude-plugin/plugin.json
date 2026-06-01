@@ -1,0 +1,11 @@
+{
+  "name": "how-it-works",
+  "description": "Build a polished, on-site /how-it-works page that explains a codebase's micro-systems in the site's own visual style. Use when the user wants an architecture explainer, a HN-shareable writeup, a build-journal page, or to \"explain how X works\" as a standalone artifact. Produces prose with real code excerpts (pinned to a SHA), hand-authored SVG diagrams in the site's palette, a sticky TOC, and de-slopified writing. Falls back to a single self-contained HTML file when no static site is detected.",
+  "version": "1.0.0",
+  "author": {
+    "name": "cbzehner",
+    "url": "https://github.com/cbzehner"
+  },
+  "repository": "https://github.com/cbzehner/skill-how-it-works",
+  "license": "MIT"
+}

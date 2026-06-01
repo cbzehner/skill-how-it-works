@@ -164,6 +164,6 @@ At completion, the following exist and pass:
 - [`references/diagrams.md`](references/diagrams.md) — SVG authoring guide, the minifier pitfall, palette extraction, accessibility
 - [`references/integration.md`](references/integration.md) — per-SSG notes (Zola, Hugo, Jekyll, Astro, Next.js, plain HTML, standalone)
 
-## Worked Example
+## Worked Example Guidance
 
-The original instance: `swimfrancisco.com/how-it-works`. A Zola + Cloudflare Worker site. Seven sections, hand-authored amber-on-navy SVG diagrams, right-rail TOC. The full implementation lives at `github.com/cbzehner/swimfrancisco`. Read `content/how-it-works.md` and `templates/how-it-works.html` there for a complete reference.
+When publishing an example, use a public repository with permission to reference its code and assets. Keep examples generic in this skill body so the workflow stays reusable across private, work, and personal projects.
