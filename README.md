@@ -1,3 +1,5 @@
+> **Moved:** this skill now lives in [cbzehner/skills](https://github.com/cbzehner/skills) under `skills/how-it-works/`. This repo is archived and read-only.
+
 # How It Works
 
 Build an on-site `/how-it-works` page that explains a codebase through its real subsystems. The output is a polished technical explainer that matches the site instead of looking like generic Markdown.
